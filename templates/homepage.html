@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for index, row in pokemon.iterrows() %}
+        <tr>
+          <td><a href = "/view_pokemon/{{row['Name']}}">{{ row['Name'] }} </a></td>
+          <td>{{ row['Type'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Add Pokemon{% endblock %}
+
+{% block content %}
+
+<form action = "#" method = "post">
+
+  <p> Pokedex Number: </p>
+  <p> <input type = "number" name = "pnumber" /></p>
+
+  <p> Name of Pokemon: </p>
+  <p> <input type = "text" name = "pname" /></p>
+
+  <p> Pokemon Primary Type: </p>
+  <p><select name=ptype1 method="GET" action="/">
+            {% for type in types %}
+            <option value="{{type}}" SELECTED>{{type}}</option>"
+            {% endfor %}
+        </select></p>
+
+  <p> Pokemon Secondary Type: </p>
+  <p><select name=ptype2 method="GET" action="/">
+            {% for type in types %}
+            <option value="{{type}}" SELECTED>{{type}}</option>"
+            {% endfor %}
+        </select></p>
+
+  <p> Pokemon Stat Total: </p>
+  <p> <input type = "number" name = "ptotal" /></p>
+
+  <p> Pokemon HP: </p>
+  <p> <input type = "number" name = "php" /></p>
+
+  <p> Pokemon Attack: </p>
+  <p> <input type = "number" name = "pattack" /></p>
+
+  <p> Pokemon Defense: </p>
+  <p> <input type = "number" name = "pdefense" /></p>
+
+  <p> Pokemon Special Attack: </p>
+  <p> <input type = "number" name = "pspattack" /></p>
+
+  <p> Pokemon Special Defense: </p>
+  <p> <input type = "number" name = "pspdefense" /></p>
+
+  <p> Pokemon Speed: </p>
+  <p> <input type = "number" name = "pspeed" /></p>
+
+  <p> <input type = "submit" value = "submit" /></p>
+
+</form>
+{% endblock %}

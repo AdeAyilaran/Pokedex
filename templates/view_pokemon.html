@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+        <h1> Information for {{content['Name']}} </h1>
+        <p> Pokedex Number: {{content['PokedexNumber']}} </p>
+        <p> Name: {{content['Name']}} </p>
+        <p> Type: {{content['Type']}} </p>
+        <p> Stat Total: {{content['Total']}} </p>
+        <p> HP: {{content['HP']}} </p>
+        <p> Physical Attack: {{content['Attack']}} </p>
+        <p> Physical Defense: {{content['Defense']}} </p>
+        <p> Special Attack: {{content['SpecialAttack']}} </p>
+        <p> Special Defense: {{content['SpecialDefense']}} </p>
+        <p> Speed: {{content['Speed']}} </p>
+
+        <a href = "{{ url_for('delete_pokemon', pokemon_id = content['Name'])}}" > Delete Pokemon</a>
+    </body>
+{% endblock %}
